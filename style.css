@@ -90,7 +90,13 @@ MENU
     font-weight:900;
     display:block;
 }
-#header-name:after{
+#menu{
+    display:none;
+    position: absolute;
+    right:2em;
+    top:1em;
+}
+/*#header-name:after{
     content:'...';
     color:rgb(1,1,1,0);
     background-image:url('images/menu.png');
@@ -101,6 +107,7 @@ MENU
     display:none;
     filter:invert(0);
 }
+*/
 #page-navigation{
     text-align: right;
     display:inline-block;
@@ -133,8 +140,11 @@ Small devices (landscape phones, 576px and up)
     #header-name{
         padding:.5em;
     }
+    #menu{
+        display:inline-block;
+    }
     #page-navigation{
-        max-height: 0;
+        max-height:0;
         transition: max-height 0.15s ease-out;
         width:100%;
         top:0em;
@@ -157,15 +167,17 @@ Small devices (landscape phones, 576px and up)
     #page-navigation li:last-of-type{
         border-bottom:none;
     }
-    #header-name:after{
+    /*#header-name:after{
         display:inline-block;
         cursor: pointer;
     }
-    #header-name:hover ~ #page-navigation{
+    */
+    /*#header-name:hover ~ #page-navigation{
         max-height: 500px;
         transition: max-height 0.25s ease-in;
     }
     #page-navigation:hover{
         max-height: 500px;
     }
+    */
 }
