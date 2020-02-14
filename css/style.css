@@ -104,6 +104,7 @@ MENU
     float:right;
     position:relative;
     padding-top:.5em;
+    transition: max-height 0.25s ease-in;
 }
 #page-navigation li{
     display:inline;
@@ -142,6 +143,11 @@ MENU
 #page-navigation li:hover > ul, 
 #page-navigation li ul:hover{
     visibility:visible;
+}
+
+#page-navigation.open {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
 }
 /*
 =================================================
