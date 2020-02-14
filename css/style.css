@@ -1,0 +1,213 @@
+/*
+=================================================
+FONT IMPORT
+=================================================
+*/
+@import url('https://fonts.googleapis.com/css?family=Alegreya:800,900|Roboto:100,300,400,500,700,900&display=swap');
+
+/*
+=================================================
+CSS RESET
+=================================================
+*/
+*{
+    box-sizing:border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+=================================================
+GLOBAL
+=================================================
+*/
+html{
+    font-size:16px;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    min-width:300px;
+}
+p, a, li{
+    font-size:1em;
+    text-decoration:none;
+}
+/*
+=================================================
+MENU
+=================================================
+*/
+#column-one{
+    background:#f1f1f1;
+    border-bottom:1px solid #CCCCCC;
+    margin:0;
+    padding: 1.5em 3em .75em 3em;
+    position:relative;
+}
+#header-name{
+    font-family: 'Alegreya', serif;
+    font-size:2em;
+    font-weight:900;
+    display:inline-block;
+    cursor: pointer;
+}
+#menu{
+    display:none;
+    position: absolute;
+    right:2em;
+    top:1em;
+    cursor: pointer;
+}
+#page-navigation{
+    text-align: right;
+    display:inline-block;
+    float:right;
+    position:relative;
+    padding-top:.5em;
+}
+#page-navigation li{
+    display:inline;
+    text-transform: uppercase;
+    position:relative;
+}
+#page-navigation li a{
+    color:#444444;
+    transition: .3s;
+    margin-left: 2em;
+    padding-bottom:1.2em;
+}
+#page-navigation li ul{
+    visibility:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-13;
+    padding-top:2.3em;
+    width:10em;
+}
+#page-navigation li ul li{
+    background:#f1f1f1;
+    display:block;
+} 
+#page-navigation li ul li:hover{
+    background:#CCCCCC;
+}
+#page-navigation li ul li a{
+    display:block;
+    margin-left:0;
+    padding:1em;
+    text-align: left;
+}
+
+#page-navigation li:hover > ul, 
+#page-navigation li ul:hover{
+    visibility:visible;
+}
+/*
+=================================================
+SMALL DEVICES (landscape phones, 576px and up)
+=================================================
+*/
+@media (max-width: 767.98px) {
+    #column-one{
+        padding:0;
+    }
+    #header-name{
+        padding:.5em;
+    }
+    #menu{
+        display:inline-block;
+    }
+    #page-navigation{
+        max-height:0;
+        width:100%;
+        top:0em;
+        padding:0;
+        overflow:hidden;
+        background:#dbdbdb;
+    }
+    #page-navigation li:first-of-type{
+        border-top:1px solid #CCCCCC;
+    }
+    #page-navigation li{
+        display:block;
+        margin:0;
+        text-align:center;
+        border-bottom:1px solid #CCCCCC;
+        cursor: pointer;
+        overflow:auto;
+    }
+
+    #page-navigation li a{
+        margin:0;
+        padding:1em;
+        display:block;
+    }
+    #page-navigation li:hover{
+        background:#999999;
+    }
+    #page-navigation li:last-of-type{
+        border-bottom:1px solid #CCCCCC;
+    }
+    #page-navigation li ul{
+        visibility:visible;
+        display:block;
+        width:100%;
+        position:relative;
+        top:0;
+        z-index:1;
+        padding-top:0;
+    }
+    #page-navigation li ul li{
+        background:#FFFFFF;
+    }
+    #page-navigation li ul li a{
+        text-align:center;
+    }
+    #page-navigation li ul li:first-of-type{
+        border-top:none;
+    }
+    #page-navigation li ul li:last-of-type{
+        border-bottom:1px solid #CCCCCC !important;
+    }
+}

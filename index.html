@@ -12,23 +12,9 @@
     <title>Menu</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $( document ).ready(function() {
-            var menu_button = false;
-            $( "#column-one" ).prepend( "<img src='images/menu.png' id='menu' onclick='' />" );
-            $('#menu').click(function(){
-                if (menu_button == false){
-                    $('#page-navigation').animate({'max-height':'500px'}, 100);
-                    menu_button = true;
-                }else{
-                    $('#page-navigation').animate({'max-height':'0px'}, 100);
-                    menu_button = false;
-                }
-            });
-        });
-    </script>
+    <script src="js/responsive.js"></script>
 </head>
 
 <body>
@@ -36,25 +22,33 @@
     <div id="middle">
         <div id="middle-container">
             <div id="column-one">
-                <h1 id="header-name">CELECT.org</h1>
+                <h1 id="header-name">Celect.org</h1>
                 <ul id="page-navigation">
                     <li class="d1" id="page_57307">
-                        <a href="#">Foo</a>
+                        <a href="#">Link 1</a>
                     </li>
                     <li class="d1 current" id="page_57301">
-                        <a href="#">Minima</a>
+                        <a href="#">Hover</a>
+                        <ul>
+                            <li>
+                                <a href="#">Sub-Item #1</a>
+                            </li>
+                            <li>
+                                <a href="#">Sub-Item #2</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="d1" id="page_57302">
-                        <a href="#" class="inline">Cof</a><a href="2_coffee_b.htm" class="inline">fee</a>
+                        <a href="#" class="inline">Link 3</a>
                     </li>
                     <li class="d1" id="page_57305">
-                        <a href="#">Ride</a>
+                        <a href="#">Link 4</a>
                     </li>
                     <li class="d1" id="page_57306">
-                        <a href="#">Norris</a>
+                        <a href="#">Link 5</a>
                     </li>
                     <li class="d1" id="page_57307">
-                        <a href="#">T1 Old</a>
+                        <a href="#">Link 6</a>
                     </li>
                 </ul>
             </div>
